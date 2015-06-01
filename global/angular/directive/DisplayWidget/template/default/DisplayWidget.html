@@ -1,0 +1,22 @@
+<div name="display-widget-container">
+    <div name="display-container">
+        <table style="width:100%">
+            <tr ng-repeat="row in options.itemsTable">
+                <td id="cell_{{$parent.$index}}_{{$index}}" class="display-column" ng-repeat="col in row" colspan="{{col.panCol}}">
+                    <span ng-show="col.label !== 'empty'">
+                        <table style="width: 100%">
+                            <tr>
+                                <td style="min-width: 160px;"><span class="display-col-label">{{col.label}} : </span></td>
+                                <td style="width:100%;min-width:160px;">
+                                    <span class="display-col-value" ng-if="!col.isLink">{{col.value}}</span>
+                                    <span class="display-col-value" ng-if="col.isLink"><a href="{{col.linkTo}}">{{col.value}}</a></span>
+                                </td>
+                            </tr>
+                        </table>                      
+                    </span>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div name="display-transclude" ng-transclude></div>
+</div>

@@ -1,0 +1,13 @@
+<td name="display-field-container" style="vertical-align: middle">
+    <div name="display-field-cell" ng-style="style">
+        <div style="display: table-row">
+            <input type="hidden" name="{{label}}" value="{{value}}" ng-if="needInput"/>
+            <div name="display-field-label" style="display: table-cell; width: 20%;">
+                <span>{{caption}}</span>
+            </div>
+            <div name="display-field-contents" style="display: table-cell">
+                <span>{{value}}</span>
+            </div>
+        </div>
+    </div>
+</td>

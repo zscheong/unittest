@@ -1,0 +1,16 @@
+<div name="flow-widget">
+    <div name="flow-header">
+        <div id="display-{{i.target}}" class="flow-display" ng-repeat="i in item" ng-class="{'left-adjust': !$first, 'active-step': $first}">
+            <a href="#{{i.target}}" ng-click="LinkClick(i.target)" >{{i.caption}}</a>
+        </div>
+    </div>
+    <div name="flow-content">
+        <h4>Step {{stepCount}}: {{activeCaption}}</h4>
+        <div name="flow-content-panel" ng-transclude></div>
+    </div>
+    <div name="flow-footer" style="height:50px;padding-right: 50px">     
+        <button type="button" class="btn btn-info" style="float:right;margin:5px" name="flow-step-button" ng-click="NextStep()" ng-if="current !== lastStep">Next</button>
+        <button type="button" class="btn btn-info" style="float:right;margin:5px" name="last-step-button" ng-click="FinishStep()" ng-if="current === lastStep">Finish</button>
+        <button type="button" class="btn btn-info" style="float:right;margin:5px" name="back-step-button" ng-click="BackStep()" ng-if="current !== firstStep" style="display: none">Back</button>
+    </div>
+</div>

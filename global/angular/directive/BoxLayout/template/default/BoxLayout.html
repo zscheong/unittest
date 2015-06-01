@@ -1,0 +1,20 @@
+<div name="box-layout-outer-container" class="{{options.cornerClass}}"
+     ng-class="{'outer-box-panel': options.category==='content'&&options.layout==='panel'}">
+    <div name="box-layout-inner-container" class="{{options.cornerClass}}" 
+        ng-class="{'inner-box-panel': options.category==='content'&&options.layout==='panel'}"
+        style="">
+        <div name="box-title" class="{{options.category}}-box-title-{{options.stylish}}">
+           
+        </div>
+        <div class="box-toolbar-container" ng-show="options.category==='content'&&options.tools==='yes'">
+            <table name="box-toolbar" class="box-toolbar">
+                <tr>
+                    <td class="box-max-btn" ng-click="Maximize()" title="maximize"><span class="glyphicon glyphicon-resize-full"></span></td>
+                    <td class="box-max-btn" ng-click="Minimize()" title="minimize"><span class="glyphicon glyphicon-resize-small"></span></td>
+                </tr>
+            </table>
+        </div>
+        <div name="box-content" class="{{options.category}}-box-content-{{options.stylish}}"></div>
+        <div name="transclude" ng-transclude></div>
+    </div>
+</div>

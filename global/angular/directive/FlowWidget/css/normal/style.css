@@ -1,0 +1,43 @@
+div[name="flow-header"] {
+    margin: auto;
+}
+
+.left-adjust {
+    margin-left: -5px;
+}
+.active-step {
+    background-position: 0 -31px !important;
+}
+.active-step a {
+        color: white !important;
+}
+
+div.flow-display {
+    display: inline-block;
+    height: 31px;
+    min-width: 150px;
+    
+    /*margin-left: -15px;*/
+    background-image: url('../../image/tabs.png');
+}
+
+div.flow-display a {
+    padding-top: 5px;
+    padding-left: 20px;
+    display: block;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    cursor: default;
+}
+
+div[name="flow-content"] {
+    padding: 5px;
+}
+
+div[name="flow-content"] > h4 {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+

@@ -1,0 +1,30 @@
+<div name="slider-widget-container">
+    <div id="slider-container" name="slider-container" 
+         style="position:relative;overflow:hidden;">
+        <div u="loading" class="slider-loading">
+            <div class="slider-load-background"></div>
+            <div class="slider-load-image"></div>
+        </div>
+        
+        <div u="slides" class="slider-content-container" style="overflow:hidden;">
+            
+        </div>
+        
+        
+        <div u="thumbnavigator" class="slider-thumbnail" style="height:45px">
+            <div class="slider-thumb-background"></div>
+            <div u="slides">
+                <div u="prototype" class="slider-thumb-prototype">
+                    <thumbnailtemplate class="slider-thumb-template"></thumbnailtemplate>
+                </div>
+            </div>
+        </div>
+        
+        <div u="navigator" class="slider-bullet" style="position: absolute; bottom: 16px; right: 10px;">
+            <div u="prototype" class="prototype" style="position: absolute; width: 12px; height: 12px;"></div>
+        </div>
+        <span u="arrowleft" class="slider-arrow-left"></span>
+        <span u="arrowright" class="slider-arrow-right"></span>
+    </div>
+    <div name="slider-transclude" ng-transclude></div>
+</div>

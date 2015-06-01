@@ -1,0 +1,50 @@
+<div>
+    <span style="color:red;">The AND condition will take the priority!</span>
+    <table name="query-criteria-table" style="width:100%;overflow:scroll;">
+        <tr name="row{{$index}}" ng-repeat="row in valueRow">
+            <td name="field-column-{{$index}}" style="width:30%; min-width: 150px;padding-left: 20px;">
+                <table style="width:100%"><tr>
+                    <td form-select data="fieldColValue" id="query-field-{{$index}}" value="row.field" label="query_field-{{$index}}" 
+                        no-label="" change-event="true" custom-event="QueryFieldChange">                        
+                    </td>
+                </tr></table>
+            </td>
+            <td name="exp-column-{{$index}}" style="width:15%; min-width: 100px;padding-left: 20px;">
+                <table style="width:100%"><tr>
+                    <td form-select id="query-exp-{{$index}}" label="query_exp-{{$index}}" value="row.exp" change-event="true" custom-event="QueryExpChange"
+                        label="exp-{{$index}}" no-label=""></td>
+                </tr></table>
+            </td>
+            <td name="value-column-{{$index}}" style="width:50%; min-width: 200px;padding-left: 20px;">
+                <table style="width:100%"><tr>
+                    <td form-select id="query-value-text-{{$index}}" value="row.value" ng-show="valueType[$index] === 'textrange'" 
+                        label="value_text-{{$index}}" multiple="true" no-label="" allow-tag change-event="true" custom-event="QueryValueChange"></td>
+                    <td form-field id="query-value-text-{{$index}}" value="{{row.value}}" ng-show="valueType[$index] === 'text'" 
+                        label="value_text-{{$index}}" multiple="true" no-label="" allow-tag change-event="true" custom-event="QueryValueChange"></td>
+                    <td form-date id="query-value-date-{{$index}}" single="" value="{{row.value}}" ng-show="valueType[$index] === 'date'" 
+                        label="value_date-{{$index}}" no-label="" change-event="true" custom-event="QueryValueChange"></td>
+                    <td form-date id="query-value-date-{{$index}}" value="{{row.value}}" ng-show="valueType[$index] === 'daterange'" 
+                        label="value_date-{{$index}}" no-label=""></td>
+                    <td form-select id="query-value-select-{{$index}}" value="row.value" ng-show="valueType[$index] === 'select'" 
+                        label="value_select-{{$index}}" no-label=""></td>
+                </tr></table>
+            </td>
+            <td style="padding-right:10px">
+                <span name="join-label-{{$index}}" ng-show="joinStatus[$index] === 'show'" ng-click="EditJoin($index)">{{row.join}}</span>
+            </td>
+            <td form-select id="join-{{$index}}" name="join-column-{{$index}}" style="width:5%; min-width: 50px;padding-right:10px" ng-show="joinStatus[$index] === 'edit'"
+                width="100px" no-label="" label="join-{{$index}}" blur-event="true">
+                <option>and</option>
+                <option>or</options>
+            </td>
+            <input type="hidden" name="query_join-{{$index}}" value="{{row.join}}"/>
+            <td><span class="glyphicon glyphicon-trash" style="cursor: pointer;" ng-click="DeleteRow($index)" ng-show="critRow != 0"></span></td>
+        </tr>   
+    </table>
+    <input type="hidden" name="query-criteria-result" value="{{query_result}}"/>
+    <span style="color:red;" ng-if="queryField"></span>
+    <div>
+        <button type="button" name="AndButton" ng-click="AddAndCrit()">AND Condition</button>
+        <button type="button" name="OrButton" ng-click="AddOrCrit()">OR Condition</button>
+    </div>
+</div>

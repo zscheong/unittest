@@ -1,0 +1,13 @@
+<div name="nav-container" class="nav-bar" ng-class="{'orient-horizontal':!isVertical, 'orient-vertical':isVertical}">
+    <div name="nav-header"></div>
+    <div name="nav-contents">
+        <ul name="item-container" ng-transclude 
+            ng-class="{'first-level-horizontal':!isVertical, 
+                        'first-level-vertical':isVertical,
+                        'nav-border': hasBorder,
+                        'nav-noborder': !hasBorder}"
+            ng-style="style">
+        </ul>
+    </div>
+    <div name="nav-footer"></div>
+</div>

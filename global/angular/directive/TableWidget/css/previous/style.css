@@ -1,0 +1,33 @@
+.dataTables_filter {
+    margin: auto;
+    margin-bottom: 10px;
+    padding-top: 5px;
+    
+    width: 210px;
+    float: none !important;
+}
+.dataTables_length {
+    padding: 10px;
+}
+.dataTable {
+    box-shadow: 0 1px 10px rgba(0,0,0,0.5);
+}
+
+.dataTable thead {
+    background: #3276b1;
+}
+.dataTable thead th {
+    color: white;
+}
+.dataTable tr.odd {
+    background-color: #f9f9f9;
+}
+.dataTable tr.even {
+    background-color: white;
+}
+.dataTable tr.odd td.sorting_1 {
+    background-color: #f1f1f1;
+}
+.dataTable tr.even td.sorting_1 {
+    background-color: #f9f9f9;
+}

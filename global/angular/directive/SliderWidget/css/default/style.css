@@ -1,0 +1,106 @@
+/*arrow stylish*/
+.slider-arrow-left, .slider-arrow-right, .slider-arrow-leftdn, .slider-arrow-rightdn {
+    position: absolute;
+    cursor: pointer;
+    display: block;
+    background: url(../../../../../jquery/jssor/img/a02.png) no-repeat;
+    overflow: hidden;
+}
+.slider-arrow-left {   background-position: -3px -33px; }
+.slider-arrow-right {    background-position: -63px -33px; }
+.slider-arrow-left:hover { background-position: -123px -33px; }
+.slider-arrow-right:hover { background-position: -183px -33px; }
+.slider-arrow-leftdn { background-position: -3px -33px; }
+.slider-arrow-rightdn { background-position: -63px -33px; }
+
+/*bullet stylish*/
+.slider-bullet div, .slider-bullet div:hover, .slider-bullet .av
+{
+    filter: alpha(opacity=70);
+    opacity: .7;
+    overflow:hidden;
+    cursor: pointer;
+    border: #000 1px solid;
+}
+.slider-bullet div { background-color: gray; }
+.slider-bullet div:hover, .slider-bullet .av:hover { background-color: #d3d3d3; }
+.slider-bullet .av { background-color: #fff; }
+.slider-bullet .dn, .slider-bullet .dn:hover { background-color: #555555; }
+
+/*slider thumbnail*/
+.slider-thumbnail {
+    position: absolute; 
+    bottom: 0px; 
+    left: 0px; 
+    width: 100%;
+}
+.slider-thumb-background {
+    filter: alpha(opacity=40); 
+    opacity:0.4; 
+    position: absolute; 
+    display: block;
+    background-color: #000000; 
+    top: 0px; 
+    left: 0px; 
+    width: 100%; 
+    height: 100%;
+}
+.slider-thumb-prototype {
+    position: absolute; 
+    width: 100%; 
+    height: 45px; 
+    top: 0; 
+    left: 0;
+}
+.slider-thumb-template {
+    font-family: verdana; 
+    font-weight: normal; 
+    position: absolute; 
+    width: 100%; 
+    height: 100%; 
+    top: 0; 
+    left: 0; 
+    color:#fff; 
+    line-height: 45px; 
+    font-size:20px; 
+    padding-left:10px;
+}
+
+/*slider loading*/
+.slider-loading {
+    position: absolute; 
+    top: 0px; 
+    left: 0px;
+}
+.slider-load-background {
+    filter: alpha(opacity=70); 
+    opacity:0.7; 
+    position: absolute; 
+    display: block;
+    background-color: #000000; 
+    top: 0px; 
+    left: 0px;
+    width: 100%;
+    height:100%;
+}
+.slider-load-image {
+    position: absolute; 
+    display: block; 
+    background: url(../../../../../jquery/jssor/img/loading.gif) no-repeat center center;
+    top: 0px; 
+    left: 0px;
+    width: 100%;
+    height:100%;
+}
+
+/*slider container*/
+.slider-content-container {
+    cursor: move; 
+    position: absolute; 
+    left: 0px; 
+    top: 0px; 
+    width: 100%; 
+    overflow: hidden;
+}
+
+

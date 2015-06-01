@@ -1,0 +1,10 @@
+<li name="nav-item" ng-class="{'horizontal':!isVertical, 'vertical':isVertical}">
+    <a href="{{target}}" ng-class="{'nav-imgwidth':label==''}">
+        <img src="{{img}}" alt="{{alt}}" ng-if="img"/>
+        {{label}}
+    </a>  
+    <b ng-class="{'nav-caret-bottom': isVertical, 'nav-caret-right':!isVertical}" ng-if="label!='' && hasChild"></b>
+    <div name="sub-level" ng-transclude>
+        
+    </div>
+</li>

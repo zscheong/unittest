@@ -1,0 +1,26 @@
+<div class="header">    
+    <div name="menu-button">
+        <button type="button" class="btn btn-info active menu-btn" data-toggle="button" 
+                ng-click="toggleDisplay();">
+            <img src="public/js/angular/directive/HeaderLayout/Simple/image/menu.png"/>
+        </button>
+    </div>
+    <div name="company-session" ng-if="hasCompanyInfo">
+        <a><img src="{{logoSrc}}" alt="Company Logo" ng-if='logoSrc'/><span ng-if='logoText'>{{logoText}}</span></a>
+    </div>
+    <div name="pref-session">
+        <ul id="pref-nav" nav-bar orient="horizontal" has-border="false">                
+            <li nav-item img="public/js/angular/directive/HeaderLayout/Simple/image/setting.png"
+                ng-click="toggleDisplay()">
+                <ul><li nav-item label="Setting"></li></ul>
+            </li>
+            <li id="pref-personal" nav-item label="Administrator">
+                <ul>
+                    <li nav-item label="preferences"></li>
+                    <li class="divider"></li>
+                    <li nav-item label="Log out"></li>
+                </ul>
+            </li>      
+        </ul>
+    </div>
+</div>

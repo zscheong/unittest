@@ -1,0 +1,62 @@
+<div name="form-widget-container">
+    <div name="form-container">
+        <table style="width:100%">
+            <tr ng-repeat="row in options.itemsTable">
+                <td id="cell_{{$parent.$index}}_{{$index}}" class="form-column" ng-repeat="col in row" colspan="{{col.panCol}}">
+                    <span ng-show="col.label !== 'empty'">
+                        <table style="width: 100%">
+                            <tr>
+                                <td style="min-width: 160px;">                                    
+                                    <label for="{{col.name}}" class="form-col-label">{{col.label}} : </label>
+                                    <span class="form-compulsory" ng-if="col.validate">*</span>
+                                </td>
+                                <td style="width:100%;min-width:160px;" ng-switch on='col.type'>
+                                    <span class="form-col-value" >
+                                    
+                                        <textarea id="{{col.name}}" name="{{col.name}}" ng-switch-when="textarea" 
+                                                  rows="5" class="form-input form-text-input"
+                                                    ng-class="{'validate[required] text-compulsory': col.validate && !col.validateClass, 
+                                                   'validate[required,custom[{{col.validateClass}}]] text-compulsory': col.validate && col.validateClass,
+                                                    'readonly': col.readonly}"
+                                                placeholder="{{col.placeholder}}" ng-model="col.value"
+                                                style="resize:none;"></textarea>
+                                        <input id="{{col.name}}" name="{{col.name}}" ng-switch-when="checkbox" 
+                                               type="checkbox" class="form-input form-boolean"
+                                             ng-class="{'validate[required] text-compulsory': col.validate, 'readonly': col.readonly}"
+                                           placeholder="{{col.placeholder}}" ng-model="col.value"/>
+                                        <input id="{{col.name}}" name="{{col.name}}" ng-switch-when="password" 
+                                               type="password" class="form-input form-text-input"
+                                               ng-class="{'validate[required] text-compulsory': col.validate, 'readonly': col.readonly}"
+                                               placeholder="{{col.placeholder}}" ng-model="col.value"/>
+                                        <input id="{{col.name}}" name="{{col.name}}" ng-switch-when="email" 
+                                               type="email" class="form-input form-text-input"
+                                               ng-class="{'validate[required,custom[email]] text-compulsory': col.validate, 'readonly': col.readonly}"
+                                               placeholder="{{col.placeholder}}" ng-model="col.value"/>
+                                        <input id="{{col.name}}" name="{{col.name}}" ng-switch-when="text" 
+                                               type="text" class="form-input form-text-input"
+                                            ng-class="{'validate[required] text-compulsory': col.validate && !col.validateClass, 
+                                                   'validate[required,custom[{{col.validateClass}}]] text-compulsory': col.validate && col.validateClass,
+                                                    'readonly': col.readonly}"
+                                                placeholder="{{col.placeholder}}" ng-model="col.value"/>
+                                        <select id="{{col.name}}" ng-switch-when="picklist" class="form-select" 
+                                                name="{{col.name}}" data-value="{{col.value}}">
+                                            <option></option>
+                                            <option ng-repeat="val in col.valueList" value="{{val.id}}">
+                                                {{val.text}}
+                                            </option>
+                                        </select>
+                                        <input id="{{col.name}}" name="{{col.name}}" ng-switch-when="date" 
+                                               type="text" class="form-input form-text-input form-date"
+                                               ng-class="{'validate[required,custom[date]] text-compulsory': col.validate, 'readonly': col.readonly}"
+                                               placeholder="{{col.placeholder}}" ng-model="col.value"/>
+                                    </span>
+                                </td>
+                            </tr>
+                        </table>                      
+                    </span>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div name="form-transclude" ng-transclude></div>
+</div>

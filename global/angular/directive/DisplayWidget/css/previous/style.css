@@ -1,0 +1,88 @@
+/*Class*/
+.display-border {
+    border:1px solid white;
+    border-radius: 5px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+    
+    border-right: 3px solid #aaa;
+    border-bottom: 3px solid #aaa;
+}
+.shadow {
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+.row-border {
+    border-top: 1px solid #aaa;
+}
+
+/*Form Style*/
+div[name="display-container"] {
+    margin: auto;
+    padding:10px;
+    background: white;
+}
+div[name="display-header"] span {
+    padding-left: 10px;
+    
+    color: #777;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+/*Block Style*/
+div[name="display-block-container"] {
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    
+    border:1px solid #aaa;
+    border-radius: 5px;
+    
+    /*overflow:hidden;*/
+}
+div[name="display-block-header"] {
+    background-color: #428bca;
+    padding:5px;
+    border-bottom:1px solid #aaa;
+}
+div[name="display-block-header"] span {
+    padding-left: 20px;
+    color: #fff;
+    font-weight: bold;
+}
+
+div[name="display-block-footer"] {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display:block;
+    border-top:2px solid #777;
+    padding:10px;
+    height:45px;
+}
+
+/*Field Style*/
+td[name="display-field-container"] {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+div[name="display-field-label"] {
+    padding: 5px;
+}
+div[name="display-field-contents"] {
+    padding: 5px;
+}
+div[name="display-field-label"] span{
+    display: block;
+    padding-right: 30px;
+    text-align: right;
+    
+    width: 100%;
+    min-width: 150px;
+
+    color: #777;
+    font-weight: normal;
+}
+
+div[name="display-field-contents"] span {
+    min-width: 180px;
+}

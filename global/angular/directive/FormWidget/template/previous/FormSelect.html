@@ -1,0 +1,19 @@
+<td name="field-container" style="vertical-align: middle">
+    <div name="field-cell" ng-style="style">
+        <div style="display:table-row">
+            <div name="field-label" style="display:table-cell; width: 10%" ng-hide="noLabel">
+                <label for="select_{{label}}">
+                    <span style="color:red;display:inline-block" ng-if="isRequire"> * </span>
+                    {{caption}}</label>
+            </div>
+            <div name="field-contents" style="display: table-cell;vertical-align: middle">
+                <div name="select-contents" style="display:inline-block; width: 100%">
+                    <select id="select_{{label}}" name="{{label}}" class="select-class" style="width:95%" ng-transclude></select>
+                </div>
+                <div style="display:inline-block; padding-right: 10px;width:15%" ng-if="hasOpBtn">
+                    <button type="button" name="OpBtn" ng-click="OpBtnTrigger();">{{OpBtn}}</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</td>

@@ -1,0 +1,11 @@
+<div name="tab-widget">
+    <div name="tab-header">
+        <div ng-repeat="i in item">
+            <a href="#{{i.target}}" ng-click="LinkClick(i.target)">{{i.caption}}</a>
+        </div>
+    </div>
+    <div name="tab-content" ng-transclude>
+        
+    </div>
+    <div name="tab-footer"></div>
+</div>

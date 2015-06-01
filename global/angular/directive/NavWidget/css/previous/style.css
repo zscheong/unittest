@@ -1,0 +1,145 @@
+.nav-bar {
+    float:left;
+    z-index: 99;
+}
+
+.nav-bar .nav-border {
+    border-left: 0px !important;
+    border-bottom: 3px solid #aaa !important;
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.3) !important;
+}
+.nav-bar .nav-noborder {
+    border: 0px !important;
+    box-shadow: none !important;
+}
+.nav-bar .nav-imgwidth {
+    min-width: 50px !important;
+}
+.nav-bar .divider {
+    height: 1px;
+    overflow: hidden;
+    background-color: #e5e5e5;
+}
+
+.nav-bar .nav-caret-right {
+   display: inline-block;
+   width: 0;
+   height: 0;
+   margin-left: 2px;
+   margin-right: 10px;
+   vertical-align: middle;
+   border-top: 4px solid transparent;
+   border-left: 4px solid;
+   border-bottom: 4px solid transparent;
+}
+
+.nav-bar .nav-caret-bottom {
+   display: inline-block;
+   width: 0;
+   height: 0;
+   background: transparent;
+   margin-left: 2px;
+   margin-right: 10px;
+   vertical-align: middle;
+   border-top: 4px solid;
+   border-left: 4px solid transparent;
+   border-right: 4px solid transparent;
+}
+
+/*ul*/
+.nav-bar ul {
+    list-style: none;
+    display: block;
+    float: left;
+    padding: 0px;
+    
+    border: 1px solid white;
+    border-radius: 5px;
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.3);
+    
+    background: white;
+    z-index: 99;
+/*    background: #6e9bd3;*/
+    /*background: #3276b1;*/
+}
+.nav-bar li {
+    position: relative;
+    display: block;
+    white-space: nowrap;
+}
+
+.nav-bar a {
+    padding: 10px;
+    display: inline-block;
+    
+    color: white;
+    text-decoration: none;
+    min-width: 100px;
+}
+.nav-bar a:hover{
+    color: white;
+}
+
+/*Sub-Level*/
+div[name='sub-level'] ul{
+    position: absolute;;
+       
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: visibility 0s linear 0.5s, opacity 0.5s linear;
+    transition: visibility 0s linear 0.5s, opacity 0.5s linear;
+}
+div[name='sub-level'] a{
+    color: #777;
+}
+
+/*Event */
+.nav-bar li:hover {
+    background: #3276b1;
+}
+
+.nav-bar li:hover>div>ul {
+    visibility: visible;
+    
+    opacity: 1;
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s;
+}
+
+.nav-bar li.vertical:hover>b {
+   border-top: 4px solid transparent;
+   border-left: 4px solid;
+   border-bottom: 4px solid transparent;
+}
+.nav-bar li.horizontal:hover>b {
+   border-top: 4px solid;
+   border-left: 4px solid transparent;
+   border-right: 4px solid transparent;
+}
+
+.orient-horizontal div[name='sub-level'] ul {
+    top: 0;
+    left: 104%;
+}
+.first-level-horizontal > li > div[name='sub-level'] > ul{
+    top: 104%;
+    left: 0;
+}
+.first-level-horizontal > li {
+    display: inline-block;
+}
+
+.orient-vertical div[name='sub-level'] ul {
+    top: 0;
+    left: 104%;
+}
+.first-level-vertical > li {
+    display: block;
+}
+.first-level-vertical {
+    border-radius: 0px !important;
+    border-top-right-radius: 5px !important;
+    border-bottom-right-radius: 5px !important;
+    min-height: 500px;
+}
+

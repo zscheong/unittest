@@ -1,0 +1,39 @@
+div.header {
+    background: #3276b1; 
+    
+    padding: 5px;
+    margin-bottom: 5px;
+    
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    border-bottom: 3px solid #aaa;
+}
+
+.header div {
+    display: inline-block;
+}
+
+.header div[name="company-session"] {
+    padding-left: 20px;
+    padding-right: 15px;
+}
+.header div[name="company-session"] a {
+    text-decoration: none;
+    cursor: pointer;
+}
+.header div[name="company-session"] img {
+    max-height: 42px; 
+}
+.header div[name="company-session"] span {
+    padding-left: 5px;
+    font-size: 18px;
+    color: white;
+   
+}
+
+.header div[name="pref-session"] {
+    float:right;
+}
+.header .menu-btn {
+    padding-left: 5px;
+    padding-right: 5px;
+}

@@ -1,0 +1,21 @@
+<td name="field-container" style="vertical-align: middle">
+    <div name="field-cell" ng-style="style">
+        <div style="display:table-row">
+            <div name="field-label" style="display:table-cell; width: 10%" ng-if="!noLabel">
+                <label for="select_{{label}}">
+                    <span style="color:red;display:inline-block" ng-if="isRequire"> * </span>
+                    {{caption}}</label>
+            </div>
+            <div name="field-contents" style="display: table-cell">
+                <div style="display:inline-block; width: 100%">
+                    <input name="{{label}}" type="text" id="field-{{label}}" class="shadow date-input"
+                               placeholder="{{placeholder}}" ng-model="value"/>
+                    <span class="glyphicon glyphicon-calendar icon" ng-click="ShowPicker();"></span>
+                </div>
+                <div style="display:inline-block; padding-right: 10px;width:15%" ng-if="hasOpBtn">
+                    <button type="button" name="OpBtn" ng-click="OpBtnTrigger();">{{OpBtn}}</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</td>

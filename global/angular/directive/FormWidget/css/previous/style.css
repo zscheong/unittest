@@ -1,0 +1,131 @@
+/*Class*/
+.form-border {
+    border:1px solid white;
+    border-radius: 5px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+    
+    border-right: 3px solid #aaa;
+    border-bottom: 3px solid #aaa;
+}
+.shadow {
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+.date-input {
+    padding: 5px;
+    padding-left: 10px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border: 1px solid #aaa;
+    
+    min-width: 120px;
+    width: 85%;
+    
+    -webkit-transition: border linear .2s, box-shadow linear .2s;
+    transition: border linear .2s, box-shadow linear .2s;
+}
+.icon {
+    border: 1px solid #aaa;
+    background: #eee;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    width: 32px;
+    height: 32px;
+    padding: 7px;
+    display: inline-block;
+    cursor: pointer;
+}
+.text-input {
+    padding: 5px;
+    padding-left: 10px;
+    border-radius: 5px;
+    border: 1px solid #aaa;
+    
+    min-width: 180px;
+    width: 95%;
+    
+    -webkit-transition: border linear .2s, box-shadow linear .2s;
+    transition: border linear .2s, box-shadow linear .2s;
+}
+.row-border {
+    border-top: 1px solid #aaa;
+}
+.readonly {
+    background: beige;
+}
+.select2-container {
+    width: 95%;
+}
+
+/*Form Style*/
+div[name="form-container"] {
+    margin: auto;
+    padding:10px;
+    background: white;
+}
+div[name="form-header"] span {
+    padding-left: 10px;
+    
+    color: #777;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+/*Block Style*/
+div[name="block-container"] {
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    
+    /*overflow:hidden;*/
+}
+div[name="block-header"] {
+    background-color: #428bca;
+/*    padding:5px;
+    border-bottom:1px solid #aaa;*/
+}
+div[name="block-header"] span {
+    padding-left: 20px;
+    color: #fff;
+    font-weight: bold;
+}
+
+div[name="block-footer"] {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display:block;
+    border-top:2px solid #777;
+    padding:10px;
+    height:45px;
+}
+
+/*Field Style*/
+td[name="field-container"] {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+td[name="field-container"] label{
+    padding-right: 30px;
+    text-align: right;
+    
+    width: 100%;
+    min-width: 150px;
+
+    color: #777;
+    font-weight: normal;
+}
+
+div[name="field-contents"] .select-class {
+    min-width: 180px;
+}
+
+div[name="field-contents"] input {   
+    height: 32px;
+    transition: width 1s, height 0.5s;
+    -webkit-transition: width 1s, height 0.5s;
+}
+div[name="field-contents"] input:focus{
+    box-shadow: 3px 3px 8px rgba(0, 100, 200, 0.5);
+    height: 50px;
+}
+

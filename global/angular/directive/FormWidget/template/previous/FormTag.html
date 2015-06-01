@@ -1,0 +1,13 @@
+<div name="form-container" ng-class="{'form-border':hasBorder}" ng-style="style">
+
+    <form id="ft-{{id}}" name="form-tag" action="index.php" method="POST" class="form-horizontal"></form>
+    <div name="form-submit">
+        <div name="form-header"><span ng-if="caption">{{caption}}</span></div>
+        <div name="form-contents" ng-transclude>
+        </div>
+        <div name="form-footer" style="width:100%;height:45px;text-align: right;">
+            <button name="button-submit" class="btn btn-primary" ng-click="Validate();" type="submit">Submit</button>
+        </div>
+    </div>
+    
+</div>

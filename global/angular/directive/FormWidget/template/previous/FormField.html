@@ -1,0 +1,48 @@
+<td name="field-container" style="vertical-align: middle">
+    <div name="field-cell" ng-style="style">
+        <div style="display: table-row">
+            <div style="display:table-cell; width:10%; vertical-align: middle" ng-hide="noLabel">          
+                <label for="field-{{label}}">
+                    <span style="color:red;display:inline-block" ng-if="isRequire"> * </span>
+                    {{caption}}</label>
+            </div>
+            <div name="field-contents" style="display: table-cell" ng-switch on="type">
+                <div style="display: table;width:100%">
+                    <div style="display: table-row">
+                        <div ng-if="type!='default' && type !='text'" style="display:table-cell; width: 90%">
+                            <textarea name="{{label}}" ng-switch_when="textarea" id="field-{{label}}" rows="5" class="shadow text-input"
+                                      ng-class="{'validate[required]': isRequire && !isCustom, 
+                                               'validate[required,custom[{{require}}]]': isRequire && isCustom}"
+                                            placeholder="{{placeholder}}" ng-model="value"></textarea>
+                            <input name="{{label}}" ng-switch-when="checkbox" type="checkbox" id="field-{{label}}" style="width:auto;"
+                                   ng-class="{'validate[required]': isRequire && !isCustom, 
+                                               'validate[required,custom[{{require}}]]': isRequire && isCustom}"
+                                   placeholder="{{placeholder}}" ng-model="value"/>
+                            <input name="{{label}}" ng-switch-when="password" type="password" id="field-{{label}}" class="shadow text-input"
+                                   ng-class="{'validate[required]': isRequire && !isCustom, 
+                                               'validate[required,custom[{{require}}]]': isRequire && isCustom}"
+                                   placeholder="{{placeholder}}" ng-model="value"/>
+                            <input name="{{label}}" ng-switch-when="email" type="email" id="field-{{label}}" class="shadow text-input"
+                                   ng-class="{'validate[required]': isRequire && !isCustom, 
+                                               'validate[required,custom[{{require}}]]': isRequire && isCustom}"
+                                   placeholder="{{placeholder}}" ng-model="value"/>
+                        </div>
+                        <div ng-if="type=='default' || type =='text'" style="display:table-cell; width:90%">
+                            <input name="{{label}}" type="text" id="field-{{label}}" class="shadow text-input readonly"
+                               ng-class="{'validate[required]': isRequire && !isCustom, 
+                                           'validate[required,custom[{{require}}]]': isRequire && isCustom}"
+                               placeholder="{{placeholder}}" ng-model="value" ng-if="readonly" readonly="readonly"/>
+                            <input name="{{label}}" type="text" id="field-{{label}}" class="shadow text-input"
+                               ng-class="{'validate[required]': isRequire && !isCustom, 
+                                           'validate[required,custom[{{require}}]]': isRequire && isCustom}"
+                               placeholder="{{placeholder}}" ng-model="value" ng-if="!readonly"/>
+                        </div>
+                        <div style="display:table-cell; padding-right: 10px;width:15%" ng-if="hasOpBtn">
+                            <button type="button" name="OpBtn" ng-click="OpBtnTrigger();">{{OpBtn}}</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</td>

@@ -1,0 +1,41 @@
+.form-column {
+    padding: 5px;
+    border-right: 1px solid white;
+}
+.form-col-label {
+    font-weight: bold;
+    color: #7c7c7c;
+    
+    position: relative;
+    right: 10px;
+    text-align: right;
+    width: 90%;
+    display: inline-block;
+    cursor: pointer;
+}
+.form-col-value {
+    padding-left: 10px;
+    font-size: 15px;
+}
+.form-input {
+    width: 85%;
+}
+.form-text-input {
+    padding: 5px;
+    border-radius: 5px;
+    border-top: 2px solid #acacac;
+    border-left: 2px solid #acacac;
+    
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+}
+.form-text-input:focus {
+    box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+    border: 1px solid rgba(81, 203, 238, 1);
+}
+.form-compulsory {
+    color: red;
+}
+
